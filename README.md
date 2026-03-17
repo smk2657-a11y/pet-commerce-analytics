@@ -421,6 +421,20 @@ Streamlit Analytics Dashboard
 
 ---
 
+# 📦 Version History
+
+| Version | Description |
+|------|------|
+| v1.5.1 | 로그인 시 이전 분석 기록 자동 표시 |
+| v1.5.0 | 머신러닝 churn 기준 개선 및 유료/무료 기능 분리 |
+| v1.4.0 | LightGBM 기반 리스크 예측 및 환불 분석 탭 추가 |
+| v1.3.0 | 분석 비교 UI 구조 개선 |
+| v1.2.0 | SQLite 기반 분석 기록 저장 기능 추가 |
+| v1.1.0 | 로그인 / 회원가입 기능 추가 |
+| v1.0.0 | CSV 업로드 및 컬럼 매핑 기능 구현 |
+
+---
+
 # 👨‍💻 Author
 
 Data Analytics Portfolio Project
