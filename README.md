@@ -276,9 +276,154 @@ PDF 리포트 생성
 
 ---
 
+---
+
+# 🤖 Machine Learning Model
+
+이 프로젝트는 고객 이탈 위험을 예측하기 위해  
+**LightGBM 기반 머신러닝 모델**을 사용합니다.
+
+고객의 구매 행동 데이터를 기반으로  
+각 고객의 **이탈 확률 (Churn Probability)** 을 계산합니다.
+
+---
+
+## Model
+
+LightGBM Classifier
+
+```
+LGBMClassifier
+```
+
+LightGBM은 Gradient Boosting 기반 모델로  
+대규모 데이터에서도 높은 성능을 보이는 트리 기반 모델입니다.
+
+---
+
+## Feature Engineering
+
+고객 행동 데이터를 기반으로 다음 Feature를 생성합니다.
+
+- Recency (최근 구매 경과일)
+- Frequency (구매 빈도)
+- Monetary (구매 금액)
+- 구매 카테고리 다양성
+- 구매 채널
+- 환불 여부
+- 고객 세그먼트
+
+이 Feature들은 고객의 구매 패턴과 이탈 가능성을 설명하는 핵심 변수입니다.
+
+---
+
+## Model Performance
+
+모델 성능은 다음 지표로 평가했습니다.
+
+Evaluation Metrics
+
+```
+ROC-AUC : 0.70
+PR-AUC  : 0.86
+```
+
+ROC-AUC는 모델의 분류 성능을 평가하는 대표적인 지표이며  
+PR-AUC는 이탈 고객과 같은 **불균형 데이터 문제에서 중요한 성능 지표**입니다.
+
+---
+
+## Model Output
+
+모델은 고객별로 다음 값을 예측합니다.
+
+```
+churn probability
+```
+
+이를 기반으로 시스템은
+
+- High Risk 고객 식별
+- 고객 세그먼트 분석
+- CRM 전략 추천
+- 예상 매출 손실 계산
+
+을 수행합니다.
+
+---
+
+## Model Files
+
+머신러닝 모델은 학습 후 `.pkl` 파일로 저장되어  
+Streamlit 분석 시스템에서 사용됩니다.
+
+```
+models
+ ├── pet_churn_lgbm.pkl
+ └── pet_churn_feature_cols.pkl
+```
+
+Streamlit 애플리케이션에서 해당 모델을 로드하여  
+실시간으로 고객 이탈 위험을 예측합니다.
+
+---
+
+# 🔬 Data Science Pipeline
+
+이 프로젝트는 다음과 같은 **End-to-End 데이터 분석 파이프라인**으로 구성되어 있습니다.
+
+```
+Raw Transaction Data
+        ↓
+Data Cleaning & Preprocessing
+        ↓
+Feature Engineering
+        ↓
+Customer Segmentation (RFM)
+        ↓
+Machine Learning Model Training
+        ↓
+Churn Prediction
+        ↓
+Customer Risk Analysis
+        ↓
+CRM Strategy Recommendation
+        ↓
+Streamlit Analytics Dashboard
+```
+
+이 구조는 단순한 시각화 대시보드가 아니라  
+**실제 데이터 분석 및 머신러닝 기반 고객 분석 시스템**입니다.
+
+---
+
+# 📊 Example Insights
+
+이 시스템을 통해 다음과 같은 비즈니스 인사이트를 얻을 수 있습니다.
+
+- 어떤 고객이 이탈할 가능성이 높은가
+- 어떤 상품 카테고리에서 고객 이탈이 많이 발생하는가
+- VIP 고객 중 이탈 위험 고객은 누구인가
+- 예상되는 매출 손실 규모는 얼마인가
+- 어떤 고객에게 CRM 캠페인을 진행해야 하는가
+
+---
+
+# 🚀 Future Improvements
+
+향후 개선 가능 영역
+
+- 더 다양한 고객 행동 Feature 추가
+- 딥러닝 기반 모델 실험
+- 실시간 고객 분석 시스템 구축
+- 마케팅 자동화 시스템 연동
+- 추천 시스템 추가
+
+---
+
 # 👨‍💻 Author
 
-Data Analyst Portfolio Project
+Data Analytics Portfolio Project
 
 Customer Analytics  
 Churn Prediction  
