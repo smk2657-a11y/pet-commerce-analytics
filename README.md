@@ -39,6 +39,90 @@
 
 ---
 
+# 📌 Project Background
+
+## E-commerce Industry
+
+이커머스 산업에서는 **신규 고객 확보보다 기존 고객 유지가 훨씬 높은 수익성을 가진다.**
+
+- 신규 고객 확보 비용은 기존 고객 유지보다 **5~25배 높음**
+- 고객 유지율이 **5% 증가하면 이익이 25~95% 증가**
+
+한국 이커머스 시장은 **네이버, 쿠팡 등 대형 종합 쇼핑 플랫폼 중심으로 성장**하고 있으며  
+판매자들은 다양한 플랫폼에서 판매 데이터를 얻고 있다.
+
+하지만 플랫폼마다 **데이터 형식이 서로 달라 통합 분석이 어렵고**,  
+데이터의 양은 늘어나지만 **활용 방법을 몰라 제대로 활용하지 못하는 경우가 많다.**
+
+따라서 판매자가 데이터를 활용해 **고객 이탈을 관리하고 매출을 유지할 수 있는 분석 플랫폼**이 필요하다.
+
+---
+
+## Pet Industry
+
+반려동물 시장은 지속적으로 성장하고 있다.
+
+- 반려동물 보유 인구: **1,546만 명 (전체 인구의 29.9%)**
+- 반려동물 가구 수 **6만 가구 증가**
+- 월 평균 반려동물 관리 지출  
+  **194,000원 (약 142달러)**
+
+이는 2년 전 **154,000원 대비 약 6.8% 증가한 수치**이다.
+
+이러한 시장 성장 속에서 반려동물 판매자가  
+**고객 데이터를 활용해 효율적으로 운영할 수 있는 분석 플랫폼**을 구축하는 것이 본 프로젝트의 목적이다.
+
+---
+
+# 🧠 Problem Definition (SCQA)
+
+## S — Situation
+
+- 이커머스 산업의 성장으로 방대한 고객 데이터가 축적되고 있다.
+- 고객 이탈 예측과 관리가 기업 수익성에 매우 중요한 요소가 되었다.
+- 반려동물 판매자는 여러 플랫폼에서 판매하기 때문에 데이터 구조가 서로 다르다.
+
+---
+
+## C — Complication
+
+- 고객군별 구매 패턴이 달라 이탈 예측이 어렵다.
+- 고가치 고객이 이탈하면 매출 손실이 크게 발생한다.
+- 다양한 플랫폼 데이터를 통합 분석하기 어렵다.
+
+---
+
+## Q — Question
+
+본 프로젝트는 다음 질문에 답하고자 한다.
+
+- RFM·CLV 기반 고객 세그먼트는 어떤 행동적 차이를 보이는가?
+- 머신러닝을 통해 **고객 이탈을 사전에 예측할 수 있는가?**
+- 고객 세그먼트별 **효과적인 CRM 전략은 무엇인가?**
+- 서로 다른 플랫폼 데이터를 **통합 분석할 수 있는가?**
+
+---
+
+## A — Answer
+
+이 프로젝트는 다음 방식으로 문제를 해결한다.
+
+- RFM / CLV 기반 고객 세그먼트 생성
+- 머신러닝 기반 고객 이탈 예측 모델 구축
+- 데이터 업로드 시 자동 컬럼 매핑
+- 분석 결과를 시각화 대시보드로 제공
+
+이를 통해 판매자는
+
+- 고객 세그먼트
+- 고객 이탈 위험도
+- 카테고리별 매출 위험
+- CRM 전략
+
+을 쉽게 파악할 수 있다.
+
+---
+
 # 🧠 Core Analytics
 
 이 프로젝트는 단순 대시보드가 아니라  
@@ -212,19 +296,19 @@ project
 
 # 🚀 How to Run
 
-### 1️⃣ Install dependencies
+### Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Run Streamlit
+### Run Streamlit
 
 ```
 streamlit run app.py
 ```
 
-### 3️⃣ Open browser
+### Open browser
 
 ```
 http://localhost:8501
@@ -232,192 +316,68 @@ http://localhost:8501
 
 ---
 
-# 🧩 Key Features
+# 🧠 Machine Learning Model
 
-✔ CSV 업로드 기반 자동 분석  
-✔ 컬럼 자동 매핑 기능  
-✔ 고객 세분화 (RFM)  
-✔ 고객 이탈 위험 분석  
-✔ 예상 매출 손실 계산  
-✔ PDF 리포트 자동 생성  
-✔ 분석 결과 저장 및 관리  
-
----
-
-# 📈 Example Workflow
-
-```
-CSV 업로드
-      ↓
-컬럼 자동 매핑
-      ↓
-고객 데이터 분석
-      ↓
-이탈 위험 계산
-      ↓
-카테고리 위험 분석
-      ↓
-CRM 전략 추천
-      ↓
-PDF 리포트 생성
-```
-
----
-
-# 💡 Portfolio Highlights
-
-이 프로젝트는 다음 역량을 보여줍니다.
-
-✔ 데이터 분석 파이프라인 구축  
-✔ 고객 행동 분석 (Customer Analytics)  
-✔ 이탈 예측 모델 적용  
-✔ 데이터 기반 비즈니스 인사이트 도출  
-✔ Streamlit 기반 데이터 제품 개발  
-
----
-
----
-
-# 🤖 Machine Learning Model
-
-이 프로젝트는 고객 이탈 위험을 예측하기 위해  
-**LightGBM 기반 머신러닝 모델**을 사용합니다.
-
-고객의 구매 행동 데이터를 기반으로  
-각 고객의 **이탈 확률 (Churn Probability)** 을 계산합니다.
+이 프로젝트는 **LightGBM 기반 머신러닝 모델**을 활용하여  
+고객 이탈 위험을 예측합니다.
 
 ---
 
 ## Model
 
-LightGBM Classifier
-
 ```
 LGBMClassifier
 ```
 
-LightGBM은 Gradient Boosting 기반 모델로  
-대규모 데이터에서도 높은 성능을 보이는 트리 기반 모델입니다.
-
----
-
-## Feature Engineering
-
-고객 행동 데이터를 기반으로 다음 Feature를 생성합니다.
-
-- Recency (최근 구매 경과일)
-- Frequency (구매 빈도)
-- Monetary (구매 금액)
-- 구매 카테고리 다양성
-- 구매 채널
-- 환불 여부
-- 고객 세그먼트
-
-이 Feature들은 고객의 구매 패턴과 이탈 가능성을 설명하는 핵심 변수입니다.
-
 ---
 
 ## Model Performance
-
-모델 성능은 다음 지표로 평가했습니다.
-
-Evaluation Metrics
 
 ```
 ROC-AUC : 0.70
 PR-AUC  : 0.86
 ```
 
-ROC-AUC는 모델의 분류 성능을 평가하는 대표적인 지표이며  
-PR-AUC는 이탈 고객과 같은 **불균형 데이터 문제에서 중요한 성능 지표**입니다.
-
----
-
-## Model Output
-
-모델은 고객별로 다음 값을 예측합니다.
-
-```
-churn probability
-```
-
-이를 기반으로 시스템은
-
-- High Risk 고객 식별
-- 고객 세그먼트 분석
-- CRM 전략 추천
-- 예상 매출 손실 계산
-
-을 수행합니다.
-
----
-
-## Model Files
-
-머신러닝 모델은 학습 후 `.pkl` 파일로 저장되어  
-Streamlit 분석 시스템에서 사용됩니다.
-
-```
-models
- ├── pet_churn_lgbm.pkl
- └── pet_churn_feature_cols.pkl
-```
-
-Streamlit 애플리케이션에서 해당 모델을 로드하여  
-실시간으로 고객 이탈 위험을 예측합니다.
-
 ---
 
 # 🔬 Data Science Pipeline
 
-이 프로젝트는 다음과 같은 **End-to-End 데이터 분석 파이프라인**으로 구성되어 있습니다.
-
 ```
-Raw Transaction Data
-        ↓
-Data Cleaning & Preprocessing
-        ↓
+Raw Data
+   ↓
+Data Preprocessing
+   ↓
 Feature Engineering
-        ↓
-Customer Segmentation (RFM)
-        ↓
-Machine Learning Model Training
-        ↓
-Churn Prediction
-        ↓
-Customer Risk Analysis
-        ↓
-CRM Strategy Recommendation
-        ↓
-Streamlit Analytics Dashboard
+   ↓
+RFM / CLV Analysis
+   ↓
+Machine Learning Model
+   ↓
+Customer Churn Prediction
+   ↓
+Risk Analysis
+   ↓
+Streamlit Dashboard
 ```
-
-이 구조는 단순한 시각화 대시보드가 아니라  
-**실제 데이터 분석 및 머신러닝 기반 고객 분석 시스템**입니다.
 
 ---
 
-# 📊 Example Insights
-
-이 시스템을 통해 다음과 같은 비즈니스 인사이트를 얻을 수 있습니다.
+# 📈 Example Insights
 
 - 어떤 고객이 이탈할 가능성이 높은가
 - 어떤 상품 카테고리에서 고객 이탈이 많이 발생하는가
 - VIP 고객 중 이탈 위험 고객은 누구인가
-- 예상되는 매출 손실 규모는 얼마인가
+- 예상 매출 손실 규모는 얼마인가
 - 어떤 고객에게 CRM 캠페인을 진행해야 하는가
 
 ---
 
 # 🚀 Future Improvements
 
-향후 개선 가능 영역
-
-- 더 다양한 고객 행동 Feature 추가
-- 딥러닝 기반 모델 실험
+- 카테고리별 churn prediction 모델 확장
+- 추천 시스템 추가
 - 실시간 고객 분석 시스템 구축
 - 마케팅 자동화 시스템 연동
-- 추천 시스템 추가
 
 ---
 
@@ -438,7 +398,4 @@ Streamlit Analytics Dashboard
 # 👨‍💻 Author
 
 Data Analytics Portfolio Project
-
-Customer Analytics  
-Churn Prediction  
-CRM Strategy
+Customer Analytics / Churn Prediction / CRM Strategy
